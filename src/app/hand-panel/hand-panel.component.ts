@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { CardComponent } from './card/card.component';
 
 @Component({
   selector: 'app-hand-panel',
-  imports: [],
+  imports: [CardComponent],
   templateUrl: './hand-panel.component.html',
   styleUrl: './hand-panel.component.css'
 })

@@ -2,7 +2,25 @@ div {
     position: absolute;
     left: 20%;
     right: 20%;
-    bottom: 10%;
+    bottom: 5%;
     text-align: center;
     border: 1px solid black;
+    width: 70%;
+    height: 20%;
+}
+
+tr {
+    height: 90%;
+    position: absolute;
+    top: 5%;
+    bottom: 5%;
+    left: 3%;
+    right: 3%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
