@@ -30,8 +30,13 @@ export class TestBuyArmyButtonComponent {
       this.clickFeedbackMsg.set("You've reached the maximum number of available armies!");
       console.log("too many armies error triggered")
     } else {
-      this.buyArmyEmitter.emit();
       this.goldAvailableRef.set(this.goldAvailableRef() - 50); //not getting updated in the UI
+      const purchaseInfoToEmit = {
+        amountSpent: 50,
+        goldRemaining: this.goldAvailableRef,
+        armyPurchased: {}
+      }
+      this.buyArmyEmitter.emit(purchaseInfoToEmit); //temporarily just passing the amount of gold remaining
       this.clickFeedbackMsg.set("Army purchased! (-50 gold)");
       console.log("gold now left:" + this.goldAvailableRef);
     }

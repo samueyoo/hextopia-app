@@ -3,6 +3,8 @@
     <h1>{{title}} test</h1>
   </div>
   <app-resource-pool></app-resource-pool>
-  <app-test-buy-army-button></app-test-buy-army-button>
+  <app-test-buy-army-button
+    (buyArmyEmitter)="onBuyArmy($event)"
+  />
   <app-hand-panel></app-hand-panel>
 </main>
