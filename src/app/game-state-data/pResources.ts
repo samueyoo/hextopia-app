@@ -7,7 +7,9 @@ export let pResources =
             armies: {
                 availableToDeploy: [],
                 deployed: [],
+                maxArmiesAllowed: 7,
             },
+            cardsInHandById: ["DMU107", "DMU107", "BOLT"],
         },
         p2: {
             currency: {
@@ -16,7 +18,9 @@ export let pResources =
             armies: {
                 availableToDeploy: [],
                 deployed: [],
+                maxArmiesAllowed: 7,
             },
+            cardsInHandById: ["DMU107", "DMU107", "BOLT"],
         }
     }
 

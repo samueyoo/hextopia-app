@@ -1,9 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { CardComponent } from './card/card.component';
-import { DUMMY_CARDS } from '../dummy-data/dummy-cards';
-
-const randomIndex = Math.floor(Math.random() * DUMMY_CARDS.length);
-
+import { DUMMY_CARDS_DATABASE } from '../dummy-data/dummy-cards-database';
+import { pResources } from '../game-state-data/pResources';
 
 @Component({
   selector: 'app-hand-panel',
@@ -12,7 +10,8 @@ const randomIndex = Math.floor(Math.random() * DUMMY_CARDS.length);
   styleUrl: './hand-panel.component.css'
 })
 export class HandPanelComponent {
-  cardsInHand = DUMMY_CARDS[randomIndex]; //creating new property contained in the HandPanelComponent
+  cardIdsInHand = pResources.p1.cardsInHandById; //creating new property contained in the HandPanelComponent
+  cardIdSample = this.cardIdsInHand[2];
   //This property can now be accessed in the html template file
   // we could mark this as private (private cardsInHand) which would make it inaccessible by the html file
 }

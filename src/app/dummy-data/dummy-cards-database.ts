@@ -1,12 +1,12 @@
-export const DUMMY_CARDS = [
+export const DUMMY_CARDS_DATABASE = [
     {
-        id: 'DMU107',
+        cardId: 'DMU107',
         name: "Sheoldred, the Apocalypse",
         cardArt: "shelly2.png",
         cardType: "musterableArmy"
     },
     {
-        id: 'BOLT',
+        cardId: 'BOLT',
         name: "Lightning Bolt",
         cardArt: "bolt.png",
         cardType: "musterableArmy"
